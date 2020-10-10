@@ -37,9 +37,15 @@ class TestCredentials(unittest.TestCase):
 
         self.new_socials.save_account()
         self.assertEqual(len(Credentials.account_list),1)
+    
          
-
-
+    # def test_delete_account(self):
+    #     '''
+    #     test_delete_account test case to test if the account object is removed from
+    #      the account list
+    #      '''
+    #     self.new_socials.delete_account()
+    #     self.assertEqual(len(Credentials.account_list),0)
 
 if __name__ == '__main__':
     unittest.main()            

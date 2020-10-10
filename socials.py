@@ -27,8 +27,8 @@ class Credentials:
         '''
         Credentials.account_list.append(self)
 
-    # def delete_account(self):
-    #     '''
-    #     delete_account method deletes account objects saved in the account_list
-    #     '''
-    #     Credentials.account_list.remove(self)
+    def delete_account(self):
+        '''
+        delete_account method deletes account objects saved in the account_list
+        '''
+        Credentials.account_list.remove(self)

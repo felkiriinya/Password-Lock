@@ -35,9 +35,7 @@ class TestUser(unittest.TestCase):
         test_save_user to check if we can save our user object to our users_list
         '''
         self.new_user.save_user()
-        test_user =User ('username','password')
-        test_user.save_user()
-        self.assertEqual(len(User.users_list),2)
+        self.assertEqual(len(User.users_list),1)
 
 if __name__ == '__main__':
     unittest.main()            
