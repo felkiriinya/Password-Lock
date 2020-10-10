@@ -68,6 +68,10 @@ class TestCredentials(unittest.TestCase):
         
         self.new_socials.delete_account()
         self.assertEqual(len(Credentials.account_list),1)
-
+    def test_display_accounts(self):
+        '''
+        test method that returns a list of all accounts added
+        '''
+        self.assertEqual(Credentials.display_accounts(),Credentials.account_list)
 if __name__ == '__main__':
     unittest.main()            

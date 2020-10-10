@@ -32,3 +32,11 @@ class Credentials:
         delete_account method deletes account objects saved in the account_list
         '''
         Credentials.account_list.remove(self)
+    
+    @classmethod
+    def display_accounts(cls):
+        '''
+        This method displays saved credentials
+        '''
+
+        return cls.account_list
