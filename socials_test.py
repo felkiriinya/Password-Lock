@@ -18,6 +18,13 @@ class TestCredentials(unittest.TestCase):
 
         self.new_socials = Credentials('Instagram','Felista_Kiriinya','Felista1#')
 
+    def tearDown(self):
+        '''
+        tearDown method that does clean up after each test case has run.
+        '''
+
+        Credentials.account_list=[]
+
     def test_init(self):
 
         '''
@@ -37,15 +44,30 @@ class TestCredentials(unittest.TestCase):
 
         self.new_socials.save_account()
         self.assertEqual(len(Credentials.account_list),1)
+
+    def test_save_multiple_accounts(self):
+        '''
+        test_save_multiple_contact to check if we can save multiple contact
+        objects to our contact_list
+        '''    
+
+        self.new_socials.save_account()
+        test_account =  Credentials('Twitter','felkiriinya','Tomorrow1£')
+        test_account.save_account()
+
+        self.assertEqual(len(Credentials.account_list),2) 
     
-         
-    # def test_delete_account(self):
-    #     '''
-    #     test_delete_account test case to test if the account object is removed from
-    #      the account list
-    #      '''
-    #     self.new_socials.delete_account()
-    #     self.assertEqual(len(Credentials.account_list),0)
+    def test_delete_account(self):
+        '''
+        test_delete_account test case to test if the account object is removed from
+         the account list
+         '''
+        self.new_socials.save_account() 
+        test_account =  Credentials('Twitter','felkiriinya','Tomorrow1£')
+        test_account.save_account()
+        
+        self.new_socials.delete_account()
+        self.assertEqual(len(Credentials.account_list),1)
 
 if __name__ == '__main__':
     unittest.main()            
