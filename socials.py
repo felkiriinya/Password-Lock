@@ -20,12 +20,12 @@ class Credentials:
         self.password=password
 
 
-    # def save_account(self):
+    def save_account(self):
 
-    #     '''
-    #     save_account method saves accounts objects into the contact_list
-    #     '''
-    #     Credentials.account_list.append(self)
+        '''
+        save_account method saves accounts objects into the contact_list
+        '''
+        Credentials.account_list.append(self)
 
     # def delete_account(self):
     #     '''
