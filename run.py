@@ -46,7 +46,7 @@ def main():
     print(f"Hello {user_name}! You can use these short codes to navigate through")
     print('\n')
 
-    # while True:
+    while True:
 
         print('cc - Create a new password locker account')
         print('lg - Log in into your created account')
@@ -67,7 +67,44 @@ def main():
             save_new_user(create_user(username,password))
 
             print ('\n')
-            print('Congratulations ')
+            print(f'Congratulations {username} your account has been successfully created!')
+
+            print ('\n')
+            print('You can now log in using the username and password created')
+
+            print('Username...')
+            login_username = input()
+
+            print('Password...')
+            login_password = input()
+
+            if username != login_username or password != login_password:
+                print('Invalid Username or password!')
+                print('Re-enter your username....')
+                login_username = input()
+
+                print('Re- enter your password....')
+                login_password = input()
+
+            else :
+                 print ('\n')
+                 print(f'Hello {login_username}. Welcome to your password locker account!')
+                 print ('\n')
+
+        elif short_code == 'lg':
+             
+                print('Log in to your existing account')
+                print('Username....')
+                lg_username = input()
+
+                print('Password....')
+                lg_password = input()
+
+                if lg_username != 'Felista' and lg_password != 'Felista1#':
+                    print('The account does not exist, please create an account')
+                else:
+                    print(f'Hello {lg_username}. Welcome to your password locker account!')
+                    print ('\n')
 
 if __name__ == '__main__':
 
