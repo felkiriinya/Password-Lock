@@ -30,6 +30,6 @@ This project was built using Pythonv3.8
 
 Should you be unable to access the website, have any recommendations and/or questions, feel free to email me:[felkriinya@gmail.com](mailto:felkiriinya@gmail.com)
 
-## [License]()
+## [License](https://github.com/felkiriinya/Password-Lock/blob/master/LICENSE)
 
 Copyright (c) 2020 [Felista Kiriinya](https://github.com/felkiriinya)  
