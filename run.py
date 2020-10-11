@@ -33,9 +33,9 @@ def save_social_account(socials):
 
 def delete_social_account(socials):
     '''
-    function to delete an account
+    function to delete saved social accounts
     '''
-    socials.delete_account()          
+    socials.delete_account()     
 
 def display_accounts():
     '''
@@ -206,6 +206,18 @@ def social_account():
                     print('\n')
                     print('You do not have any social account credentials saved')       
                     print('\n')
+
+            elif short_code == 'del':
+                print('Which account do you want to delete?')
+
+                deleted_account = input()       
+                 
+                delete_social_account(deleted_account)
+
+            elif short_code == 'ex':
+                print('Bye! You can come back later.')    
+            else:
+                print('Wrong short code! Try again')
 
 if __name__ == '__main__':
 

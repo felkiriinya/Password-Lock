@@ -29,7 +29,7 @@ class Credentials:
 
     def delete_account(self):
         '''
-        delete_account method deletes account objects saved in the account_list
+        deletes save accounts from the account list
         '''
         Credentials.account_list.remove(self)
     
