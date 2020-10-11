@@ -105,7 +105,14 @@ def main():
                 else:
                     print(f'Hello {lg_username}. Welcome to your password locker account!')
                     print ('\n')
+        elif short_code == 'ex':
 
+                print('Bye! You can come back later!')
+                break
+        else:
+                print('Wrong short code! Try again')
+
+                
 if __name__ == '__main__':
 
     main()
