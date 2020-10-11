@@ -178,6 +178,34 @@ def social_account():
             
             elif short_code == 'esc':
                 print('Add your existing account credentials')
+                print("-"*10)
+
+                print('Social Account Name ...')
+                accountname = input()
+
+                print('Username...')
+                username = input()
+
+                print('Password...')
+                password = input()
+
+                save_social_account(create_social_account(accountname,username,password))
+                print(f'{accountname} account credentials have been saved and stored')
+                
+            elif short_code == 'dsc':
+                if display_accounts():
+                    print("This is a list of all your saved account credentials") 
+                    print("-"*20)   
+
+                    for social in display_accounts():
+                        print(
+                            f"{social.account_name} {social.username} {social.password}"
+                        )
+                    print('\n')    
+                else:
+                    print('\n')
+                    print('You do not have any social account credentials saved')       
+                    print('\n')
 
 if __name__ == '__main__':
 
