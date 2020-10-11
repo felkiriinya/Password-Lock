@@ -22,7 +22,7 @@ def create_social_account(accountname,username,password):
     '''
     Function to create a new account
     '''
-    new_account= Credentials(account_name,username,password)
+    new_account= Credentials(accountname,username,password)
     return new_account
 
 def save_social_account(socials):
@@ -133,7 +133,7 @@ def main():
 
 def social_account():
     print('Now you can store your social accounts credentials here!')
-    print ('\n')
+  
     print('Use these short codes to navigate through')
     print ('\n')
 
@@ -162,12 +162,22 @@ def social_account():
                 print('cp - To create your own password')
 
                 short_code1 = input().lower()
-                if short_code1 = 'gp':
+                if short_code1 == 'gp':
+                    password = create_password()
+                    print(password)
+                elif short_code1 == 'cp':
+                    print('Password....')
+                    password = input()
+                else:
+                    print('Invalid short code')      
 
                 save_social_account(create_social_account(accountname,username,password))
-
-
-
+                   
+                # print ('\n')
+                print(f'{accountname} account credentials have been saved and stored')
+            
+            elif short_code == 'esc':
+                print('Add your existing account credentials')
 
 if __name__ == '__main__':
 
